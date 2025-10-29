@@ -1,3 +1,38 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="header__top">
+    <div class="container header__container">
+      <a href="#" class="header__logo">Reel to real</a>
+      <nav class="nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="shops.html" class="nav__link">Магазины</a>
+          </li>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link">Kонтакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a
+          href="#"
+          class="btn-reset header__fav header__action"
+          aria-label="Перейти в избраное"
+        >
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#fav"></use>
+          </svg>
+        </a>
+        <button
+          class="btn-reset header__cart header__action"
+          aria-label="Открыть мини-корзину"
+        >
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+        </button>
+        <button class="btn-reset header__enter header__action">Войти</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom"></div>
 </header>

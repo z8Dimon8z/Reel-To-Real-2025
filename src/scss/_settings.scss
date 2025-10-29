@@ -36,6 +36,13 @@ a {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .btn-reset {
   border: none;
   padding: 0;
