@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  @include('partials/head.html')
 
-  <body class="page__body">
-    <div class="site-container">
-      @include('partials/header.html')
-      <main class="main"></main>
-      @include('partials/footer.html')
-      <!-- @include('html/h1.html') пример include -->
-    </div>
-  </body>
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="overlay"></div>
+    @include('partials/header.html')
+    @include('partials/mobile-menu.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/loop-scroll.html')
+      @include('partials/main-categories.html')
+      @include('partials/products.html')
+      @include('partials/subscribe.html')
+    </main>
+    @include('partials/popups.html')
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
 </html>

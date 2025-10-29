@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-empty-line-before */
 // базовые подключения
 @import "vars";
 @import "mixins";
@@ -5,4 +6,57 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/btn";
+@import "./components/to-top";
+@import "./components/modals";
+@import "./components/small-input";
+@import "./components/small-textarea";
+@import "./components/nav";
+@import "./components/header-btn";
+@import "./components/header-search";
+@import "./components/mini-cart";
+@import "./components/mini-cart-product";
+@import "./components/stepper";
+@import "./components/search-result";
+@import "./components/search-result-product";
+@import "./components/megamenu";
+@import "./components/products-tabs";
+@import "./components/badge";
+@import "./components/product";
+@import "./components/cookie-block";
+@import "./components/breadcrumbs";
+@import "./components/catalog-filter-badge";
+@import "./components/custom-checkbox";
+@import "./components/custom-radio";
+@import "./components/catalog-filter";
+@import "./components/price-range";
+@import "./components/custom-select";
+@import "./components/pagination";
+@import "./components/mobile-menu";
+
 @import "./components/header";
+@import "./components/hero";
+@import "./components/loop-scroll";
+@import "./components/main-categories";
+@import "./components/products";
+@import "./components/subscribe";
+@import "./components/footer";
+
+@import "./components/inner-hero";
+@import "./components/catalog-content";
+
+@import "./components/product-hero";
+@import "./components/product-testimonials";
+@import "./components/product-testimonial";
+@import "./components/product-similar";
+@import "./components/order-product";
+
+@import "./components/shops-content";
+
+@import "./components/cart-content";
+
+@import "./components/not-found";
+
+@import "./components/contacts-content";
+
+@import "./components/order-content";

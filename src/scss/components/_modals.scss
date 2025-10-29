@@ -1,0 +1,143 @@
+.graph-modal {
+  &__container {
+    &--enter {
+      border-radius: 4px;
+      padding: 0;
+      width: 100%;
+      max-width: 400px;
+
+      @include mobile {
+        max-width: 300px;
+      }
+    }
+  }
+
+  &__close {
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+    background: none;
+    transition: fill 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed currentcolor;
+      outline-offset: -1px;
+    }
+
+    @include hover {
+      fill: var(--color-accent);
+    }
+
+    &:active {
+      fill: var(--color-accent-active);
+    }
+  }
+}
+
+.enter-modal {
+  padding: 44px 48px;
+  padding-bottom: 32px;
+
+  &__step {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+    background: none;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+
+    @include mobile {
+      gap: 8px;
+    }
+  }
+
+  &__label {
+    width: 100%;
+  }
+
+  &__btn {
+    padding: 10px 38px;
+    width: 100%;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--color-secondary);
+
+    @include mobile {
+      margin-top: 8px;
+      font-size: 10px;
+    }
+  }
+
+  @include mobile {
+    padding: 32px 12px;
+    padding-bottom: 24px;
+  }
+}

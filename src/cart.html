@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="overlay"></div>
+    @include('partials/header-inner.html')
+    @include('partials/mobile-menu.html')
+    <main class="main">
+      @include('partials/cart-hero.html')
+      @include('partials/cart-content.html')
+    </main>
+    @include('partials/popups.html')
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
+  </div>
+</body>
+
+</html>

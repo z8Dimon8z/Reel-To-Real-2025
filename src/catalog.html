@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="overlay"></div>
+    @include('partials/header-inner.html')
+    @include('partials/mobile-menu.html')
+    <main class="main">
+      @include('partials/catalog-hero.html')
+      @include('partials/catalog-content.html')
+    </main>
+    @include('partials/popups.html')
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

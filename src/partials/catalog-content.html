@@ -1,0 +1,678 @@
+<section class="catalog">
+  <h2 class="visually-hidden">Вокальные микрофоны</h2>
+  <div class="catalog__top">
+    <div class="container">
+      <div class="catalog__inner grid">
+        <div class="catalog__left">
+          <h3 class="catalog__subtitle">Фильтры</h3>
+        </div>
+        <div class="catalog__right">
+          <div class="catalog__mobile-top">
+            <h3 class="catalog__mobile-title">
+              Фильтры
+              <span class="catalog__mobile-count">3</span>
+            </h3>
+            <button
+              class="btn-reset catalog__mobile-open-filters"
+              aria-label="Открыть фильтры"
+            ></button>
+          </div>
+          <div class="catalog__filtered">
+            <div class="catalog-filter-badge">
+              Все бренды
+              <button
+                class="btn-reset catalog-filter-badge__close"
+                aria-label="Сбросить фильтр"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="catalog-filter-badge">
+              5000₽ - 10000₽
+              <button
+                class="btn-reset catalog-filter-badge__close"
+                aria-label="Сбросить фильтр"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="catalog-filter-badge">
+              Sennheiser
+              <button
+                class="btn-reset catalog-filter-badge__close"
+                aria-label="Сбросить фильтр"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <button class="btn-reset catalog__reset">Очистить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="catalog__wrapper">
+    <div class="container">
+      <div class="catalog__inner grid">
+        <div class="catalog__left catalog__left--mobile-fixed">
+          <div class="catalog__mobile-filter-top">
+            <h3 class="catalog__mobile-filter-subtitle">Фильтры</h3>
+            <button
+              class="btn-reset catalog__mobile-filter-close"
+              aria-label="Закрыть фильтры"
+            >
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="catalog__wrapper">
+            <ul class="list-reset catalog-filter">
+              <li class="catalog-filter__block catalog-filter__block--open">
+                <h4 class="catalog-filter__title">Бренды</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          name="Бренды[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Shure</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          checked
+                          name="Бренды[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Sennheiser</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="catalog-filter__block catalog-filter__block--open">
+                <h4 class="catalog-filter__title">Цена</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-radio">
+                        <input
+                          type="radio"
+                          name="Цена"
+                          checked
+                          class="custom-radio__field"
+                        />
+                        <span class="custom-radio__content">1000₽ - 2000₽</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter__item">
+                      <label class="custom-radio">
+                        <input
+                          type="radio"
+                          name="Цена"
+                          class="custom-radio__field"
+                        />
+                        <span class="custom-radio__content"
+                          >5000₽ - 10000₽</span
+                        >
+                      </label>
+                    </li>
+                    <li class="catalog-filter__item">
+                      <label class="custom-radio">
+                        <input
+                          type="radio"
+                          name="Цена"
+                          class="custom-radio__field"
+                        />
+                        <span class="custom-radio__content"
+                          >15000₽ - 50000₽</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="catalog-filter__price">
+                    <div class="catalog-filter__price-inputs">
+                      <input
+                        type="number"
+                        min="0"
+                        max="5000"
+                        step="1"
+                        placeholder="0"
+                        class="small-input catalog-filter__price-input catalog-filter__price-input--min"
+                      />
+                      <span class="catalog-filter__price-divider">-</span>
+                      <input
+                        type="number"
+                        min="0"
+                        max="5000"
+                        step="1"
+                        placeholder="5000"
+                        class="small-input catalog-filter__price-input catalog-filter__price-input--max"
+                      />
+                    </div>
+                    <div class="catalog-filter__price-range">
+                      <div class="price-range"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog-filter__block">
+                <h4 class="catalog-filter__title">Направленность</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          name="name[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Shure</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="catalog-filter__block">
+                <h4 class="catalog-filter__title">Разъемы</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          name="name[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Shure</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="catalog-filter__block">
+                <h4 class="catalog-filter__title">Цвет</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          name="name[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Shure</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="catalog-filter__block">
+                <h4 class="catalog-filter__title">Пантограф</h4>
+                <button
+                  class="btn-reset catalog-filter__btn"
+                  aria-label="Открыть блок фильтра"
+                ></button>
+                <div class="catalog-filter__inner">
+                  <ul class="list-reset catalog-filter__items">
+                    <li class="catalog-filter__item">
+                      <label class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          name="name[]"
+                          class="custom-checkbox__field"
+                        />
+                        <span class="custom-checkbox__content">Shure</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <button class="btn btn--quinary catalog__set">
+              применить фильтры
+            </button>
+          </div>
+        </div>
+        <div class="catalog__right">
+          <div class="catalog__meta">
+            <div class="catalog__shows">Показано 45 товаров</div>
+            <div class="custom-select catalog__select">
+              <button class="btn-reset custom-select__btn">
+                <span>Сначала популярные</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#sort"></use>
+                </svg>
+              </button>
+              <div class="custom-select__dropdown">
+                <ul class="list-reset custom-select__list">
+                  <li class="custom-select__item">
+                    <button
+                      class="btn-reset custom-select__choose custom-select__choose--active"
+                    >
+                      Сначала популярные
+                    </button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="btn-reset custom-select__choose">
+                      Сначала дешевле
+                    </button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="btn-reset custom-select__choose">
+                      Сначала дороже
+                    </button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="btn-reset custom-select__choose">
+                      Сначала с высоким рейтингом
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ul class="list-reset catalog__products">
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__products-item">
+              <article class="product">
+                <div class="product__top">
+                  <button
+                    class="btn-reset product__fav"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#fav"></use>
+                    </svg>
+                  </button>
+                  <div class="product__badges">
+                    <span class="badge">Хит продаж</span>
+                    <span class="badge">Новинка</span>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="img/products/1-main.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/products/1-main.png"
+                      class="product__pic"
+                      width="320"
+                      height="320"
+                      alt="AT-LPW40WN"
+                    />
+                  </picture>
+                </div>
+                <div class="product__bottom">
+                  <a href="#" class="product__brand">Audio-Technica</a>
+                  <h3 class="product__title">
+                    <a href="#" class="product__link"> AT-LPW40WN </a>
+                  </h3>
+                  <div class="product__price">110 000 ₽</div>
+                  <button class="btn btn--primary product__btn">
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <ul class="list-reset catalog__pagination pagination">
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn pagination__prev">
+                Назад
+              </button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn pagination__btn--active">
+                1
+              </button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn">2</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn">3</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn">4</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn">5</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn-reset pagination__btn pagination__next">
+                Вперед
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

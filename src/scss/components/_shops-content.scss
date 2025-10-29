@@ -1,0 +1,240 @@
+/* stylelint-disable rule-empty-line-before */
+.shops-content {
+  padding-bottom: 100px;
+
+  &__top {
+    border-top: 1px solid var(--color-neutral-muted);
+    border-bottom: 1px solid var(--color-neutral-muted);
+    padding: 23px 0;
+
+    @include mobile {
+      padding: 10px 0;
+    }
+  }
+
+  &__bottom {
+    border-bottom: 1px solid var(--color-neutral-muted);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+  &__btns {
+    display: none;
+
+    @include mobile {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      gap: var(--gap);
+    }
+  }
+
+  &__button {
+    border: 1px solid var(--color-neutral-muted);
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active {
+      color: var(--color-surface-default);
+      background-color: var(--color-primary)
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 274px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__input {
+    padding-right: 0;
+    padding-left: 40px;
+    background-color: transparent;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: var(--color-secondary);
+    stroke-width: 2px;
+    object-fit: cover;
+    translate: 0 -50%;
+  }
+
+  &__left {
+    grid-column: 5 span;
+    border-right: 1px solid var(--color-neutral-muted);
+
+    @include mobile {
+      grid-column: 12 span;
+      border-right: none;
+      padding-top: 20px;
+    }
+  }
+
+  &__right {
+    grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 12 span;
+    }
+  }
+
+  &__items {
+    margin-left: calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+    max-height: 498px;
+
+    .simplebar-vertical {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .simplebar-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      width: calc(100% + (2 * var(--gap)));
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 23px var(--gap);
+    gap: 8px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--color-neutral-muted);
+    }
+
+    @include mobile {
+      padding: var(--gap);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--color-accent);
+  }
+
+  &__metro {
+    position: relative;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 100%;
+      width: 8px;
+      height: 8px;
+      background-color: var(--metro-bg);
+      translate: 0 -50%;
+    }
+
+    &--purple {
+      --metro-bg: #8e479b;
+    }
+
+    &--orange {
+      --metro-bg: #ea6a00;
+    }
+
+    &--red {
+      --metro-bg: #e90101;
+    }
+  }
+
+  &__tab-mob {
+    &[data-target="map"] {
+      height: 498px;
+    }
+
+    @include mobile {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &__address {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-secondary);
+  }
+
+  &__schedule {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+  }
+
+  &__btn {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-primary);
+      outline-offset: -2px;
+    }
+  }
+
+  &__map {
+    margin-left: calc(-1 * var(--gap));
+    width: calc(100% + (var(--gap) * 2));
+    height: 100%;
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+}

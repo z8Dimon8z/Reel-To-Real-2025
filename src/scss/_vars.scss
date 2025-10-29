@@ -2,10 +2,11 @@
 // colors
 :root {
   // base
+  --gap: 24px;
   --font-family: "Inter", sans-serif;
   --second-family: "Bebas", sans-serif;
   --content-width: 100%;
-  --container-offset: 24px;
+  --container-offset: var(--gap);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors

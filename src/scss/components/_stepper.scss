@@ -1,0 +1,65 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+  background: var(--color-neutral-muted);
+  gap: 12px;
+
+  &__minus,
+  &__plus {
+    width: 12px;
+    height: 12px;
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+
+    svg {
+      fill: currentcolor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed currentcolor;
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-accent-active);
+    }
+  }
+
+  &__disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &__input {
+    width: 20px;
+    height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--color-primary);
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px dashed currentcolor;
+      outline-offset: 3px;
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+    }
+
+    &:active {
+      border-color: var(--color-accent-active);
+    }
+  }
+}

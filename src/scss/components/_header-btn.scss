@@ -1,0 +1,59 @@
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  border-right: 1px solid var(--color-neutral-muted);
+  padding: 20px 24px;
+  width: 237px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  transition: color 0.3s ease-in-out;
+  gap: 12px;
+
+  &__icon {
+    display: block;
+    width: 16px;
+    height: 10px;
+    stroke: currentcolor;
+    object-fit: cover;
+  }
+
+  &__angle {
+    display: block;
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    fill: currentcolor;
+    object-fit: cover;
+    transition: rotate 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed currentcolor;
+    outline-offset: -2px;
+  }
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &:active {
+    color: var(--color-accent-active);
+  }
+
+  &--active {
+    .header-btn__angle {
+      rotate: 180deg;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,138 @@
+.catalog-filter {
+  display: flex;
+  flex-direction: column;
+
+  &__block {
+    position: relative;
+    margin-left: calc(-1 * var(--gap));
+    border-bottom: 1px solid var(--color-neutral-muted);
+    padding: calc(var(--gap) - 1px) var(--gap);
+
+    &--open {
+      .catalog-filter__inner {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .catalog-filter__btn {
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+
+    @include tablet {
+      margin-left: 0;
+      padding: 16px var(--gap);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: var(--gap);
+    top: var(--gap);
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      width: 12px;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      translate: -50% -50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      width: 2px;
+      height: 12px;
+      background-color: var(--color-primary);
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      translate: -50% -50%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-primary);
+    }
+
+    @include hover {
+      &::before,
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: var(--color-accent-active);
+      }
+    }
+
+    @include tablet {
+      top: 16px;
+    }
+  }
+
+  &__inner {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  &__price {
+    margin-top: 20px;
+  }
+
+  &__price-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 20px;
+
+    &-divider {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--color-secondary);
+    }
+  }
+
+  &__price-range {
+    display: flex;
+    align-items: center;
+    height: 12px;
+  }
+}

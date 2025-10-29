@@ -1,0 +1,183 @@
+.search-result {
+  position: absolute;
+  left: 0;
+  top: var(--header-height);
+  z-index: 250;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: var(--color-surface-subtle);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  .simplebar-vertical {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__nav {
+    border-right: 1px solid var(--color-neutral-muted);
+    padding: var(--gap);
+    width: 474px;
+    height: 100%;
+    background-color: var(--color-surface-default);
+
+    .simplebar-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    @include very-big-desktop {
+      width: 374px;
+    }
+
+    @include tablet {
+      flex-shrink: 0;
+      padding: 24px;
+      width: 100%;
+      background-color: var(--color-surface-default);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      height: calc(100% - 48px);
+    }
+  }
+
+  &__back {
+    display: none;
+
+    @include tablet {
+      display: block;
+      border-bottom: 1px solid var(--color-neutral-muted);
+      padding: var(--gap);
+      padding-left: 40px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: left;
+      color: var(--color-primary);
+      background-image: url("../img/angle-left.svg");
+      background-position: left var(--gap) center;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-color: var(--color-surface-default);
+    }
+  }
+
+  &__content {
+    display: none;
+    width: calc(100% - 474px);
+    height: 100%;
+    transition: translate 0.3s ease-in-out;
+
+    &--active {
+      display: block;
+    }
+
+    &--visible {
+      translate: -100% 0;
+    }
+
+    @include very-big-desktop {
+      width: calc(100% - 374px);
+    }
+
+    @include tablet {
+      z-index: 5;
+      flex-shrink: 0;
+      width: 100%;
+      background: var(--color-surface-subtle);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+
+    @include tablet {
+      padding-right: 24px;
+      width: 100%;
+      text-align: left;
+      background-image: url("../img/angle-right.svg");
+      background-position: right center;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__inner {
+    --gap: 24px;
+    --elems: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--gap);
+    gap: var(--gap);
+
+    @include very-big-desktop {
+      --elems: 3;
+    }
+
+    @include big-desktop {
+      --elems: 2;
+    }
+
+    @include tablet {
+      --elems: 1;
+      --gap: 12px;
+    }
+
+    @include mobile {
+      --gap: 8px;
+
+      padding-right: 12px;
+    }
+  }
+
+  &__el {
+    width: calc((100% - ((var(--elems) - 1) * var(--gap))) / (var(--elems)));
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include tablet {
+    position: fixed;
+    top: calc(var(--header-height) - 1px);
+    border-top: 1px solid var(--color-neutral-muted);
+    height: calc(100vh - var(--header-height) + 1px - 59px);
+  }
+}

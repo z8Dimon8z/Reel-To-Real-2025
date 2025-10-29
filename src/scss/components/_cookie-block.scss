@@ -1,0 +1,62 @@
+.cookie-block {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 100;
+  border-radius: 4px;
+  padding: 24px;
+  max-width: 400px;
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.15);
+  background: var(--color-surface-default);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include mobile {
+    left: 50%;
+    right: auto;
+    bottom: 72px;
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    translate: -50% 0;
+  }
+}

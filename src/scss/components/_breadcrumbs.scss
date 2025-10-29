@@ -1,0 +1,58 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__item {
+    &:not(:last-child) {
+      .breadcrumbs__link {
+        &::after {
+          content: "/";
+          color: var(--color-secondary);
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    transition: color 0.3s ease-in-out;
+    gap: 8px;
+
+    &[href] {
+      color: var(--color-primary);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-primary);
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-accent-active);
+    }
+
+    @include mobile {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  }
+
+  @include mobile {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+}

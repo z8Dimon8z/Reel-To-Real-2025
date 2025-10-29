@@ -1,0 +1,135 @@
+.product-testimonial {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--color-neutral-muted);
+  padding: 20px;
+  padding-right: 24px;
+  background: var(--color-surface-default);
+  gap: var(--gap);
+
+  &__benefits {
+    width: 100%;
+    max-width: 268px;
+
+    @include mobile {
+      margin-top: 13px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+    background: var(--color-surface-subtle);
+  }
+
+  &__rating {
+    position: relative;
+    top: -4px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    gap: 4px;
+
+    img {
+      width: 12px;
+      height: 12px;
+
+      &:last-of-type {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--gap);
+    gap: var(--gap);
+
+    @include mobile {
+      margin-bottom: 24px;
+      gap: 24px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--color-primary);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__time {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-secondary);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 1px;
+      height: 12px;
+      background-color: var(--color-secondary);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 743px;
+    gap: 8px;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: var(--color-primary);
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: initial;
+    padding: 16px 12px;
+  }
+}

@@ -1,0 +1,89 @@
+.subscribe {
+  padding-top: 52px;
+  padding-bottom: 64px;
+  background-color: var(--color-surface-default);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 120%;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 40px;
+    max-width: 465px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--color-secondary);
+
+    @include mobile {
+      margin-bottom: 15px;
+      max-width: 266px;
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    width: 500px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .just-validate-error-label {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+  }
+
+  &__input {
+    width: 100%;
+    height: 60px;
+
+    @include mobile {
+      height: 46px;
+    }
+  }
+
+  &__btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    padding-top: 21px;
+    padding-bottom: 24px;
+  }
+}

@@ -1,0 +1,119 @@
+<section class="shops-content">
+  <h2 class="visually-hidden">Карта с магазинами</h2>
+  <div class="shops-content__top">
+    <div class="container">
+      <div class="shops-content__inner">
+        <div class="shops-content__btns">
+          <button class="btn-reset shops-content__button shops-content__button--active" data-tab="list">Список</button>
+          <button class="btn-reset shops-content__button" data-tab="map">Карта</button>
+        </div>
+        <form action="#" class="shops-content__form">
+          <label class="shops-content__label">
+            <svg class="shops-content__icon">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+            <input
+              type="search"
+              name="shops-search"
+              class="small-input shops-content__input"
+              placeholder="Название, адрес или метро"
+            />
+          </label>
+        </form>
+        <label class="custom-checkbox">
+          <input
+            type="checkbox"
+            name="Открыт_сейчас"
+            class="custom-checkbox__field"
+          />
+          <span class="custom-checkbox__content">Открыт сейчас</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="Рядом" class="custom-checkbox__field" />
+          <span class="custom-checkbox__content">Рядом</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="shops-content__bottom">
+    <div class="container">
+      <div class="shops-content__wrapper grid">
+        <div class="shops-content__left shops-content__tab-mob shops-content__tab-mob--active" data-target="list">
+          <div class="shops-content__items" data-simplebar>
+            <div class="shops-content__item">
+              <h3 class="shops-content__subtitle">Reel to Real Приморский</h3>
+              <div class="shops-content__metro shops-content__metro--purple">
+                Комендантский проспект
+              </div>
+              <div class="shops-content__address">
+                г. Санкт-Петербург, Комендантская площадь, 1 лит А​-3-6 этаж
+              </div>
+              <div class="shops-content__schedule">
+                Ежедневно с 10:00 до 22:00
+              </div>
+              <button
+                class="btn-reset shops-content__btn"
+                data-shop="primorsky"
+                aria-label="Перейти к маркеру на карте"
+              ></button>
+            </div>
+            <div class="shops-content__item">
+              <h3 class="shops-content__subtitle">Reel to Real Ладожский</h3>
+              <div class="shops-content__metro shops-content__metro--orange">
+                Ладожская
+              </div>
+              <div class="shops-content__address">
+                г. Санкт-Петербург, Заневский проспект, 65 к1 лит А
+              </div>
+              <div class="shops-content__schedule">
+                Ежедневно с 10:00 до 22:00
+              </div>
+              <button
+                class="btn-reset shops-content__btn"
+                data-shop="ladozhsky"
+                aria-label="Перейти к маркеру на карте"
+              ></button>
+            </div>
+            <div class="shops-content__item">
+              <h3 class="shops-content__subtitle">Reel to Real Калининский</h3>
+              <div class="shops-content__metro shops-content__metro--red">
+                Академическая
+              </div>
+              <div class="shops-content__address">
+                г. Санкт-Петербург, Проспект Науки, 21 к1​
+              </div>
+              <div class="shops-content__schedule">
+                Ежедневно с 10:00 до 22:00
+              </div>
+              <button
+                class="btn-reset shops-content__btn"
+                data-shop="kalininsky"
+                aria-label="Перейти к маркеру на карте"
+              ></button>
+            </div>
+            <div class="shops-content__item">
+              <h3 class="shops-content__subtitle">Reel to Real Калининский</h3>
+              <div class="shops-content__metro shops-content__metro--red">
+                Академическая
+              </div>
+              <div class="shops-content__address">
+                г. Санкт-Петербург, Проспект Науки, 21 к1​
+              </div>
+              <div class="shops-content__schedule">
+                Ежедневно с 10:00 до 22:00
+              </div>
+              <button
+                class="btn-reset shops-content__btn"
+                data-shop="kalininsky"
+                aria-label="Перейти к маркеру на карте"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div class="shops-content__right shops-content__tab-mob" data-target="map">
+          <div class="shops-content__map" id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

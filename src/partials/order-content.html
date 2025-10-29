@@ -1,0 +1,131 @@
+<section class="order-content">
+  <form method="POST" class="order-content__form">
+    <div class="order-content__inner">
+      <h2 class="order-content__title">
+        Контактные данные
+      </h2>
+      <div class="order-content__inputs">
+        <label class="order-content__label">
+          <input
+            type="text"
+            name="name"
+            placeholder="Имя*"
+            class="order-content__input name-input small-input"
+          />
+        </label>
+        <label class="order-content__label">
+          <input
+            type="text"
+            name="surname"
+            placeholder="Фамилия*"
+            class="order-content__input surname-input small-input"
+          />
+        </label>
+        <label class="order-content__label">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail*"
+            class="order-content__input email-input small-input"
+          />
+        </label>
+        <label class="order-content__label">
+          <input
+            type="tel"
+            name="tel"
+            placeholder="Телефон*"
+            class="order-content__input tel-input small-input"
+          />
+        </label>
+        <label class="order-content__label">
+          <input
+            type="text"
+            name="address"
+            placeholder="Адрес*"
+            class="order-content__input address-input small-input"
+          />
+        </label>
+        <label class="order-content__label">
+          <input
+            type="number"
+            name="postcode"
+            placeholder="Индекс*"
+            class="order-content__input postcode-input small-input"
+          />
+        </label>
+        <label class="order-content__label order-content__label--textarea">
+          <textarea
+            name="message"
+            placeholder="Сообщение*"
+            class="order-content__input message-textarea small-textarea"
+          ></textarea>
+        </label>
+      </div>
+      <label class="custom-checkbox order-content__checkbox">
+        <input type="checkbox" name="policy" class="custom-checkbox__field" />
+        <span class="custom-checkbox__content"
+          >Я согласен с
+          <a href="#">политикой обработки персональных данных</a></span
+        >
+      </label>
+      <button class="btn btn--primary order-content__btn" type="submit">
+        Оформить заказ
+      </button>
+    </div>
+  </form>
+  <div class="order-content__info">
+    <h1 class="order-content__title">Ваш заказ</h1>
+    <div class="order-content__wrapper">
+      <ul class="list-reset order-content__items" data-simplebar>
+        <li class="order-content__item">
+          <article class="order-product">
+            <picture>
+              <source srcset="img/products/1-order.webp" type="image/webp">
+              <img loading="lazy" src="img/products/1-order.png" class="order-product__image" width="80" height="80" alt="Neumann TLM 102 BK">
+            </picture>
+            <h3 class="order-product__title">
+              <a href="#" class="order-product__link">
+                Neumann TLM 102 BK
+              </a>
+            </h3>
+            <div class="order-product__inner">
+              <div class="order-product__quantity">1 шт</div>
+              <div class="order-product__price">91 890 ₽</div>
+            </div>
+          </article>
+        </li>
+        <li class="order-content__item">
+          <article class="order-product">
+            <picture>
+              <source srcset="img/products/1-order.webp" type="image/webp">
+              <img loading="lazy" src="img/products/1-order.png" class="order-product__image" width="80" height="80" alt="Neumann TLM 102 BK">
+            </picture>
+            <h3 class="order-product__title">
+              <a href="#" class="order-product__link">
+                Neumann TLM 102 BK
+              </a>
+            </h3>
+            <div class="order-product__inner">
+              <div class="order-product__quantity">1 шт</div>
+              <div class="order-product__price">91 890 ₽</div>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <div class="order-content__result">
+        <div class="order-content__row">
+          <div class="order-content__el">Сумма</div>
+          <div class="order-content__el">180 821 ₽</div>
+        </div>
+        <div class="order-content__row">
+          <div class="order-content__el">Доставка</div>
+          <div class="order-content__el">1 500 ₽</div>
+        </div>
+        <div class="order-content__row">
+          <div class="order-content__el">Итого</div>
+          <div class="order-content__el">182 321 ₽</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

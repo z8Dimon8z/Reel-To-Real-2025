@@ -1,0 +1,155 @@
+.order-content {
+  display: flex;
+
+  &__form,
+  &__info {
+    position: relative;
+    padding: 64px 80px;
+    width: 50%;
+
+    @include big-desktop {
+      padding: 32px 24px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 23px 12px;
+    }
+  }
+
+  &__info {
+    border-left: 1px solid var(--color-neutral-muted);
+    background-color: var(--color-surface-default);
+
+    @include tablet {
+      order: -1;
+      border-left: none;
+    }
+
+    @include mobile {
+      padding-bottom: 32px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    margin-top: 18px;
+    margin-bottom: 18px;
+
+    @include mobile {
+      margin-top: 13px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--color-primary);
+
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include mobile {
+      gap: 16px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    width: calc((50% - 10px));
+
+    &--textarea {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    background-color: var(--color-surface-subtle);
+  }
+
+  &__items {
+    border: 1px solid var(--color-neutral-muted);
+    max-height: 260px;
+
+    .simplebar-vertical {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-neutral-muted);
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-neutral-muted);
+    border-top: none;
+    padding: var(--gap);
+    gap: 20px;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__el {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+}

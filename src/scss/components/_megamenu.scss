@@ -1,0 +1,277 @@
+.megamenu {
+  position: absolute;
+  left: 0;
+  top: var(--header-height);
+  z-index: 250;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: var(--color-surface-default);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  .simplebar-vertical {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .simplebar-placeholder {
+    display: none;
+  }
+
+  &__nav {
+    padding: 16px 0;
+    width: 474px;
+    height: 100%;
+    background-color: var(--color-surface-subtle);
+
+    .simplebar-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    @include very-big-desktop {
+      width: 374px;
+    }
+
+    @include tablet {
+      flex-shrink: 0;
+      padding: 0;
+      width: 100%;
+      background-color: var(--color-surface-default);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    padding: 8px 24px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: left;
+    color: var(--color-primary);
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+
+    &--active {
+      background-color: var(--color-surface-default);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-primary);
+      outline-offset: -2px;
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-accent-active);
+    }
+
+    @include tablet {
+      padding: 12px 24px;
+      background-image: url("../img/angle-right.svg");
+      background-position: right 24px center;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      padding: 12px;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      height: calc(100% - 48px);
+    }
+  }
+
+  &__content {
+    display: none;
+    width: calc(100% - 474px);
+    height: 100%;
+    transition: translate 0.3s ease-in-out;
+
+    &--active {
+      display: block;
+    }
+
+    &--visible {
+      translate: -100% 0;
+    }
+
+    @include very-big-desktop {
+      width: calc(100% - 374px);
+    }
+
+    @include tablet {
+      z-index: 5;
+      flex-shrink: 0;
+      width: 100%;
+      background-color: var(--color-surface-default);
+    }
+  }
+
+  &__back {
+    display: none;
+
+    @include tablet {
+      display: block;
+      border-bottom: 1px solid var(--color-neutral-muted);
+      padding: var(--gap);
+      padding-left: 40px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: left;
+      color: var(--color-primary);
+      background-image: url("../img/angle-left.svg");
+      background-position: left var(--gap) center;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__items {
+    --gap: 24px;
+    --elems: 5;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--gap);
+    gap: var(--gap);
+
+    @include very-big-desktop {
+      --elems: 4;
+    }
+
+    @include big-desktop {
+      --elems: 3;
+    }
+
+    @include tablet {
+      --elems: 2;
+      --gap: 12px;
+    }
+
+    @include mobile {
+      --gap: 8px;
+
+      padding-right: 12px;
+    }
+  }
+
+  &__block {
+    width: calc((100% - ((var(--elems) - 1) * var(--gap))) / (var(--elems)));
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-neutral-muted);
+    padding: 20px 20px 24px;
+    background: var(--color-surface-subtle);
+    aspect-ratio: 1 / 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-primary);
+    }
+
+    @include hover {
+      .megamenu__subtitle {
+        color: var(--color-accent);
+      }
+    }
+
+    &:active {
+      .megamenu__subtitle {
+        color: var(--color-accent-active);
+      }
+    }
+
+    @include mobile {
+      padding: 12px 25px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+    height: 72px;
+
+    @include mobile {
+      margin-bottom: 12px;
+      height: 60px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 16px;
+    min-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+  }
+
+  &__quantity {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include tablet {
+    position: fixed;
+    top: calc(var(--header-height) - 1px);
+    border-top: 1px solid var(--color-neutral-muted);
+    height: calc(100vh - var(--header-height) + 1px - 59px);
+  }
+}
